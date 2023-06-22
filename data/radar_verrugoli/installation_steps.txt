@@ -1,0 +1,18 @@
+# in the bfr_3.2 folder:
+
+## build the executables "encbufr" and "decbufr":
+make -f makefile.gcc 
+
+## build the example(s):
+make -f makefile.gcc samples
+
+## build the bufr software as a library: 
+make -f makefile.gcc lib
+
+## in the main folder there are "tables-OPERA-20121119/bmtab_247.csv" "tables-OPERA-20121119/bmtab_65535.csv" and must be
+in the same folder of the other tables
+
+# example to test library:
+./bufr_3.2/decbufr -d ./tables-OPERA-20121119/ T_PAGA83_C_LAMM_20201212234500.bin convert_bufr.txt convert_bufr.dec
+
+
